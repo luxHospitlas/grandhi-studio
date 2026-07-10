@@ -2,14 +2,12 @@
  * One-time migration: fix legacy `internalLink` annotations.
  *
  * Old internal links stored a full `href` (e.g.
- * "https://drgrandhi.com/conditions/piles"). The new schema uses either a
+ * "https://drtagore.com/conditions/piles"). The new schema uses either a
  * `reference` (pick a page) or a `path` (manual). This walks every document,
  * and for each internalLink that has no `reference`:
  *   • /conditions/<slug>, /treatments/<slug>, /blog/<slug>  -> reference (if the doc exists)
  *   • anything else (/, /contact, /treatments, ...)          -> { linkType:'path', path }
  * The stale `href` is removed.
- *
- * NOTE: update SITE below to this site's actual live domain before running.
  *
  * Run (dry run):   npx sanity exec migrateInternalLinks.ts --with-user-token
  * Apply:     APPLY=1 npx sanity exec migrateInternalLinks.ts --with-user-token
@@ -19,7 +17,7 @@ import {getCliClient} from 'sanity/cli'
 const APPLY = process.env.APPLY === '1'
 const client = getCliClient()
 
-const SITE = 'https://drgrandhi.com'
+const SITE = 'https://drtagore.com'
 
 function toRelative(href: string): string {
   let p = String(href).trim()
