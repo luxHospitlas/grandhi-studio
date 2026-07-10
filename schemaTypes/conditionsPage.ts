@@ -24,7 +24,7 @@ export default defineType({
     defineField({name: 'sectionLabel', title: 'Section Label', type: 'string'}),
     defineField({name: 'headingNormal', title: 'Heading (normal text)', type: 'string'}),
     defineField({name: 'headingHighlight', title: 'Heading (highlighted text)', type: 'string'}),
-    defineField({name: 'subtext', title: 'Page Subtext / Description', type: 'text'}),
+    defineField({name: 'subtext', title: 'Page Subtext / Description', type: 'richText'}),
     defineField({name: 'viewAllHref', title: 'View All Link', type: 'string'}),
 
     // ── CTA Block ────────────────────────────────────────────────────

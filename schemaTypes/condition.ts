@@ -36,7 +36,7 @@ export default defineType({
     }),
 
     // ── Overview ──────────────────────────────────────────────────────
-    defineField({name: 'overview', title: 'Overview', type: 'text'}),
+    defineField({name: 'overview', title: 'Overview', type: 'richText'}),
 
     // ── Causes ────────────────────────────────────────────────────────
     defineField({
@@ -100,7 +100,7 @@ export default defineType({
           type: 'object',
           fields: [
             defineField({name: 'title', title: 'Title', type: 'string'}),
-            defineField({name: 'description', title: 'Description', type: 'text'}),
+            defineField({name: 'description', title: 'Description', type: 'richText'}),
             defineField({name: 'badge', title: 'Badge Text', type: 'string'}),
           ],
         }),
@@ -113,7 +113,7 @@ export default defineType({
               type: 'object',
               fields: [
                 defineField({name: 'title', title: 'Step Title', type: 'string'}),
-                defineField({name: 'description', title: 'Step Description', type: 'text'}),
+                defineField({name: 'description', title: 'Step Description', type: 'richText'}),
               ],
               preview: {select: {title: 'title', subtitle: 'description'}},
             },
@@ -132,7 +132,7 @@ export default defineType({
           type: 'object',
           fields: [
             defineField({name: 'question', title: 'Question', type: 'string'}),
-            defineField({name: 'answer', title: 'Answer', type: 'text'}),
+            defineField({name: 'answer', title: 'Answer', type: 'richText'}),
           ],
           preview: {select: {title: 'question', subtitle: 'answer'}},
         },

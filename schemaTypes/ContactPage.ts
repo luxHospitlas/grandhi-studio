@@ -68,8 +68,7 @@ export default defineType({
       name: 'subtext',
       title: 'Subtext',
       description: 'Short paragraph below the heading (e.g. "Reach out to book a consultation…")',
-      type: 'text',
-      rows: 2,
+      type: 'richText',
     }),
 
     // ══════════════════════════════════════════════════════
@@ -210,8 +209,7 @@ export default defineType({
       name: 'noticeBannerText',
       title: 'Notice Banner — Text',
       description: 'Paragraph shown below the label.',
-      type: 'text',
-      rows: 2,
+      type: 'richText',
     }),
 
     // ══════════════════════════════════════════════════════

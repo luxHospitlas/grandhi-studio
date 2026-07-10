@@ -87,8 +87,7 @@ export default defineType({
       name: 'description',
       title: 'Short Description',
       description: 'One or two sentence summary shown below the title in the hero.',
-      type: 'text',
-      rows: 3,
+      type: 'richText',
     }),
 
     // ── Hero Stats (4 numbers below the description) ──────
@@ -151,17 +150,16 @@ export default defineType({
     defineField({
       name: 'whatIsBody',
       title: 'What Is — Body Paragraph',
-      description: 'Main overview paragraph explaining the treatment.',
-      type: 'text',
-      rows: 5,
+      description:
+        'Main overview explaining the treatment. Rich text — select words and use Internal Link to point to a related condition, treatment, or blog post.',
+      type: 'richText',
     }),
     defineField({
       name: 'whatIsNote',
       title: 'What Is — Highlighted Note (blue box)',
       description:
         'Optional callout shown in the blue highlight box below the paragraph (e.g. "✓ Both total and partial… Dr. Satish Reddy will advise…")',
-      type: 'text',
-      rows: 2,
+      type: 'richText',
     }),
 
     // ══════════════════════════════════════════════════════
@@ -203,8 +201,7 @@ export default defineType({
               name: 'stepDescription',
               title: 'Step Description',
               description: 'Short paragraph for this step.',
-              type: 'text',
-              rows: 3,
+              type: 'richText',
             }),
           ],
           preview: {
@@ -307,8 +304,7 @@ export default defineType({
       title: 'Quote — Text',
       description:
         'The doctor\'s quote (e.g. "Knee replacement has transformed how we treat severe arthritis…")',
-      type: 'text',
-      rows: 3,
+      type: 'richText',
     }),
     defineField({
       name: 'quoteAttribution',
@@ -360,7 +356,7 @@ export default defineType({
           type: 'object',
           fields: [
             defineField({name: 'question', title: 'Question', type: 'string'}),
-            defineField({name: 'answer', title: 'Answer', type: 'text', rows: 3}),
+            defineField({name: 'answer', title: 'Answer', type: 'richText'}),
           ],
           preview: {
             select: {title: 'question', subtitle: 'answer'},

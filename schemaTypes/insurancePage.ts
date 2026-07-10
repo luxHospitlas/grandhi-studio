@@ -70,8 +70,7 @@ export default defineType({
       name: 'heroDescription',
       title: 'Hero — Description',
       description: 'Paragraph shown below the heading.',
-      type: 'text',
-      rows: 4,
+      type: 'richText',
     }),
     defineField({
       name: 'heroButtonLabel',
@@ -283,8 +282,7 @@ export default defineType({
       name: 'whyChooseFooterText',
       title: 'Why Choose — Footer Text',
       description: 'Closing paragraph below the bullets (e.g. "Our focus is on making healthcare affordable…").',
-      type: 'text',
-      rows: 2,
+      type: 'richText',
     }),
 
     // ══════════════════════════════════════════════════════
@@ -322,7 +320,7 @@ export default defineType({
           type: 'object',
           fields: [
             defineField({name: 'question', title: 'Question', type: 'string'}),
-            defineField({name: 'answer', title: 'Answer', type: 'text', rows: 3}),
+            defineField({name: 'answer', title: 'Answer', type: 'richText'}),
           ],
           preview: {select: {title: 'question', subtitle: 'answer'}},
         },

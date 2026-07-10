@@ -124,75 +124,9 @@ export default defineType({
     defineField({
       name: 'body',
       title: 'Blog Content',
-      description: 'Rich text editor — use headings (H2, H3), bold, italic, bullet/number lists, and links.',
-      type: 'array',
-      of: [
-        {
-          type: 'block',
-          styles: [
-            {title: 'Normal', value: 'normal'},
-            {title: 'H2', value: 'h2'},
-            {title: 'H3', value: 'h3'},
-            {title: 'H4', value: 'h4'},
-            {title: 'Quote', value: 'blockquote'},
-          ],
-          marks: {
-            decorators: [
-              {title: 'Bold', value: 'strong'},
-              {title: 'Italic', value: 'em'},
-              {title: 'Underline', value: 'underline'},
-            ],
-            annotations: [
-              {
-                name: 'link',
-                title: 'Link',
-                type: 'object',
-                fields: [
-                  defineField({
-                    name: 'href',
-                    title: 'URL',
-                    type: 'url',
-                    validation: (rule) => rule.uri({allowRelative: true}),
-                  }),
-                ],
-              },
-              {
-                name: 'internalLink',
-                title: 'Internal Link',
-                type: 'object',
-                fields: [
-                  defineField({
-                    name: 'href',
-                    title: 'Internal Path',
-                    description: 'e.g. /conditions/knee-osteoarthritis',
-                    type: 'string',
-                  }),
-                ],
-              },
-            ],
-          },
-          lists: [
-            {title: 'Bullet', value: 'bullet'},
-            {title: 'Numbered', value: 'number'},
-          ],
-        },
-        {
-          type: 'image',
-          options: {hotspot: true},
-          fields: [
-            defineField({
-              name: 'alt',
-              title: 'Alt Text',
-              type: 'string',
-            }),
-            defineField({
-              name: 'caption',
-              title: 'Caption',
-              type: 'string',
-            }),
-          ],
-        },
-      ],
+      description:
+        'Rich text editor — use headings (H2, H3), bold, italic, bullet/number lists, external links, and Internal Links to other pages.',
+      type: 'richText',
     }),
 
     // ══════════════════════════════════════════════════════
@@ -236,8 +170,7 @@ export default defineType({
       name: 'doctorBio',
       title: 'Doctor Card — Short Bio',
       description: 'One or two sentence bio shown on the card.',
-      type: 'text',
-      rows: 2,
+      type: 'richText',
     }),
 
     // ══════════════════════════════════════════════════════
@@ -263,7 +196,7 @@ export default defineType({
           type: 'object',
           fields: [
             defineField({name: 'question', title: 'Question', type: 'string'}),
-            defineField({name: 'answer', title: 'Answer', type: 'text', rows: 3}),
+            defineField({name: 'answer', title: 'Answer', type: 'richText'}),
           ],
           preview: {select: {title: 'question', subtitle: 'answer'}},
         },

@@ -166,8 +166,7 @@ export default defineType({
       title: 'About Doctor — Biography',
       description:
         "Full bio text — multiple paragraphs describing the doctor's experience, expertise, and patient approach. Use line breaks to separate paragraphs.",
-      type: 'text',
-      rows: 10,
+      type: 'richText',
     }),
 
     // ══════════════════════════════════════════════════════
@@ -356,8 +355,7 @@ export default defineType({
       name: 'specDescription',
       title: 'Specialisation — Description',
       description: "Short paragraph below the heading describing the doctor's expertise.",
-      type: 'text',
-      rows: 3,
+      type: 'richText',
     }),
     defineField({
       name: 'specialisations',
@@ -449,8 +447,7 @@ export default defineType({
               name: 'stageBody',
               title: 'Stage Description',
               description: 'Short paragraph describing this milestone.',
-              type: 'text',
-              rows: 2,
+              type: 'richText',
             }),
           ],
           preview: {select: {title: 'stageTitle', subtitle: 'stageLabel'}},
@@ -600,8 +597,7 @@ export default defineType({
       title: 'Care — Quote Text',
       description:
         'Italic quote inside the blue card (e.g. "Orthopaedic surgery is not just about fixing bones…")',
-      type: 'text',
-      rows: 4,
+      type: 'richText',
     }),
     defineField({
       name: 'careQuoteAttribution',

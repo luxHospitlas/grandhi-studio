@@ -8,7 +8,7 @@ export default defineType({
     defineField({name: 'sectionLabel', title: 'Section Label', type: 'string'}),
     defineField({name: 'headingNormal', title: 'Heading (normal)', type: 'string'}),
     defineField({name: 'headingHighlight', title: 'Heading (highlight)', type: 'string'}),
-    defineField({name: 'bio', title: 'Bio', type: 'text'}),
+    defineField({name: 'bio', title: 'Bio', type: 'richText'}),
     defineField({name: 'profileHref', title: 'Full Profile Link', type: 'string'}),
     defineField({name: 'profileLabel', title: 'Full Profile Link Label', type: 'string'}),
     defineField({

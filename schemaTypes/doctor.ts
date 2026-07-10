@@ -29,7 +29,7 @@ export default defineType({
     defineField({
       name: 'about',
       title: 'About Doctor',
-      type: 'text',
+      type: 'richText',
     }),
     defineField({
       name: 'photo',
