@@ -8,7 +8,7 @@ export default defineType({
     defineField({name: 'sectionLabel', title: 'Section Label', type: 'string'}),
     defineField({name: 'name', title: 'Hospital Name', type: 'string'}),
     defineField({name: 'tagline', title: 'Tagline', type: 'string'}),
-    defineField({name: 'description', title: 'Description', type: 'text'}),
+    defineField({name: 'description', title: 'Description', type: 'richText'}),
     defineField({name: 'logo', title: 'Logo', type: 'image'}),
     defineField({
       name: 'features',

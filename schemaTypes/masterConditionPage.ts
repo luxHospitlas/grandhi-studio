@@ -125,7 +125,7 @@ export default defineType({
               name: 'description',
               title: 'Short Description',
               description: 'One or two sentence summary shown on the card',
-              type: 'text',
+              type: 'richText',
             }),
           ],
           preview: {

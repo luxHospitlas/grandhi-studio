@@ -138,7 +138,7 @@ export default defineType({
             defineField({
               name: 'description',
               title: 'Short Description',
-              type: 'text',
+              type: 'richText',
             }),
             defineField({
               name: 'category',

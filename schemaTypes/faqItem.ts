@@ -6,7 +6,7 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({name: 'question', title: 'Question', type: 'string'}),
-    defineField({name: 'answer', title: 'Answer', type: 'text'}),
+    defineField({name: 'answer', title: 'Answer', type: 'richText'}),
     defineField({name: 'order', title: 'Display Order', type: 'number'}),
   ],
   orderings: [

@@ -22,5 +22,8 @@ import homePage from './homePage'
 import globalCtaForEachCondition from './globalctaforEachConditon'
 import blog from './blog'
 import insurancePage from './insurancePage'
+import internalLink from './internalLink'
+import richText from './richText'
+import ctaBlock from './ctaBlock'
 
-export const schemaTypes = [doctor, condition, testimonial, faqItem, trustBadge, navLink, footer, hospital, insurance, aboutDoctor, healthVideos, surgicalTeam, clinicLocation, conditionsPage, masterConditionPage, treatmentsPage, eachTreatment, eachCondition, ContactPage, aboutUsPage, homePage, globalCtaForEachCondition, blog, insurancePage]
+export const schemaTypes = [doctor, condition, testimonial, faqItem, trustBadge, navLink, footer, hospital, insurance, aboutDoctor, healthVideos, surgicalTeam, clinicLocation, conditionsPage, masterConditionPage, treatmentsPage, eachTreatment, eachCondition, ContactPage, aboutUsPage, homePage, globalCtaForEachCondition, blog, insurancePage, internalLink, richText, ctaBlock]

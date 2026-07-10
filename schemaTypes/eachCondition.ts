@@ -84,8 +84,7 @@ export default defineType({
       name: 'description',
       title: 'Short Description',
       description: 'One or two sentence summary shown below the title.',
-      type: 'text',
-      rows: 2,
+      type: 'richText',
     }),
     defineField({
       name: 'whatsappHref',
@@ -170,9 +169,9 @@ export default defineType({
     defineField({
       name: 'aboutBody',
       title: 'About — Body Paragraph',
-      description: 'Overview paragraph explaining the condition.',
-      type: 'text',
-      rows: 5,
+      description:
+        'Overview explaining the condition. Rich text — select words and use Internal Link to point to a related treatment, condition, or blog post.',
+      type: 'richText',
     }),
 
     // ══════════════════════════════════════════════════════
@@ -300,7 +299,7 @@ export default defineType({
           type: 'object',
           fields: [
             defineField({name: 'label',       title: 'Fact Label',       description: 'e.g. "Classification"',  type: 'string'}),
-            defineField({name: 'factDetails', title: 'Fact Description', description: 'e.g. "Grade I & II…"',   type: 'text', rows: 2}),
+            defineField({name: 'factDetails', title: 'Fact Description', description: 'e.g. "Grade I & II…"',   type: 'richText'}),
           ],
           preview: {select: {title: 'label', subtitle: 'factDetails'}},
         },
@@ -356,8 +355,7 @@ export default defineType({
       name: 'featuredDescription',
       title: 'Featured Card — Description',
       description: 'Short paragraph inside the featured card.',
-      type: 'text',
-      rows: 3,
+      type: 'richText',
     }),
     defineField({
       name: 'featuredBadge',
@@ -383,7 +381,7 @@ export default defineType({
           type: 'object',
           fields: [
             defineField({name: 'stepTitle',       title: 'Step Title',       description: 'e.g. "Consultation & Grading"', type: 'string'}),
-            defineField({name: 'stepDescription', title: 'Step Description', description: 'Short paragraph for this step.', type: 'text', rows: 2}),
+            defineField({name: 'stepDescription', title: 'Step Description', description: 'Short paragraph for this step.', type: 'richText'}),
           ],
           preview: {select: {title: 'stepTitle', subtitle: 'stepDescription'}},
         },
@@ -492,7 +490,7 @@ export default defineType({
           type: 'object',
           fields: [
             defineField({name: 'question', title: 'Question', description: 'e.g. "When do I need knee replacement surgery?"', type: 'string'}),
-            defineField({name: 'answer',   title: 'Answer',   description: 'Answer shown when the accordion is expanded.', type: 'text', rows: 3}),
+            defineField({name: 'answer',   title: 'Answer',   description: 'Answer shown when the accordion is expanded.', type: 'richText'}),
           ],
           preview: {select: {title: 'question', subtitle: 'answer'}},
         },

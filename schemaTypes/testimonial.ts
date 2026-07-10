@@ -5,7 +5,7 @@ export default defineType({
   title: 'Testimonial',
   type: 'document',
   fields: [
-    defineField({name: 'text', title: 'Review Text', type: 'text'}),
+    defineField({name: 'text', title: 'Review Text', type: 'richText'}),
     defineField({name: 'source', title: 'Source', type: 'string'}),
     defineField({name: 'order', title: 'Display Order', type: 'number'}),
   ],
