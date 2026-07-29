@@ -1,4 +1,5 @@
 import {defineType, defineField} from 'sanity'
+import {plainTextPreview} from './richTextPreview'
 
 export default defineType({
   name: 'eachCondition',
@@ -253,9 +254,22 @@ export default defineType({
     defineField({
       name: 'causes',
       title: 'Causes — Bullet Points',
-      description: 'Each item is one bullet point (e.g. "Age-related cartilage wear and tear").',
+      description:
+        'Each item is one bullet point (e.g. "Age-related cartilage wear and tear"). Rich text — select words and use Internal Link to point to a related condition, treatment, or blog post.',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [
+        {
+          type: 'object',
+          name: 'causeItem',
+          fields: [
+            defineField({name: 'text', title: 'Bullet Point', type: 'richText'}),
+          ],
+          preview: {
+            select: {blocks: 'text'},
+            prepare: ({blocks}: {blocks?: any[]}) => ({title: plainTextPreview(blocks)}),
+          },
+        },
+      ],
     }),
 
     // ══════════════════════════════════════════════════════

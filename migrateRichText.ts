@@ -65,6 +65,23 @@ function convert(node: Node, value: any): {value: any; changed: boolean} {
   if (node && node.type === 'array' && Array.isArray(value) && Array.isArray(node.of)) {
     let changed = false
     const out = value.map((item) => {
+      // Legacy plain-string bullet in a list whose members are now objects
+      // holding rich text (e.g. `causes`, `whoNeedsItems`).
+      if (typeof item === 'string' && node.of.length === 1) {
+        const member = node.of[0]
+        const richField = Array.isArray(member?.fields)
+          ? member.fields.find((f: Node) => f.type === 'richText')
+          : null
+        if (richField) {
+          changed = true
+          return {
+            _type: member.name || member.type,
+            _key: key(),
+            [richField.name]: toRichText(item),
+          }
+        }
+      }
+
       if (item && typeof item === 'object') {
         const member =
           node.of.find((m: Node) => (m.name || m.type) === item._type) ||
